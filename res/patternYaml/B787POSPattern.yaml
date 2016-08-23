@@ -1,0 +1,57 @@
+acarsFltTypes:
+ - 787_POS
+regexBeans:
+    - field: lastArinc
+      regex: "\\.(\\w{7})\\s+\\d{6}"
+      type: 1
+    - field: dspDt
+      regex: "\\.\\w{7}\\s+(\\d{6})"
+      type: 1
+    - field: telexDt
+      regex: "[A-Z]{4},[A-Z]{4},.{2}(\\d{6}),"
+      type: 1
+    - field: tailNr
+      regex: "AN\\s+B-(\\d{4})"
+      type: 1
+    - field: fltNr
+      regex: "FI\\s+([A-Z]{2}\\d+[A-Z]?)"
+      type: 1
+    - field: curLat
+      regex: "-\\s*\\w*,\\s*\\w*,\\s*\\**\\w*,\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*),\\s*(\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*)"
+      type: 1
+    - field: curLon
+      regex: "-\\s*\\w*,\\s*\\w*,\\s*\\**\\w*,\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*),\\s*(\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*)"
+      type: 2
+    - field: curWd
+      regex: "\\r\\n\\s*\\w*\\d{6}\\s*\\d*.\\d{2}\\s*\\d*.\\d{1}((-| )\\s*\\d*.\\d{1})"
+      type: 1
+    - field: curWs
+      regex: "\\r\\n\\s*\\w*\\d{6}\\s*\\d*.\\d{2}\\s*(\\d*.\\d{1})"
+      type: 1
+    - field: curAlt
+      regex: "-\\s*\\w*,\\s*\\w*,\\s*\\**\\w*,\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*),\\s*(\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*)"
+      type: 3
+    - field: curCas
+      regex: "-\\s*\\w*,\\s*\\w*,\\s*\\**\\w*,\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*),\\s*(\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*)"
+      type: 4
+    - field: curMh
+      regex: "-\\s*\\w*,\\s*\\w*,\\s*\\**\\w*,\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*),\\s*(\\d*),\\s*(\\-{0,1}\\s*\\d*\\.\\d*),\\s*(\\d*)"
+      type: 5
+    - field: depArpCd
+      regex: "([A-Z]{4}),([A-Z]{4}),.{8},.{6},.{7},.{5},.{3},.{6},(.{6})"
+      type: 1
+    - field: arvArpCd
+      regex: "([A-Z]{4}),([A-Z]{4}),.{8},.{6},.{7},.{5},.{3},.{6},(.{6})"
+      type: 2
+    - field: curFob
+      regex: "([A-Z]{4}),([A-Z]{4}),.{8},.{6},.{7},.{5},.{3},.{6},(.{6})"
+      type: 3
+    - field: curZfw
+      regex: ".\\d{1}(\\d*)\\s*\\d*,[-]{0,1}\\s*\\d*.\\d{2},\\r\\n"
+      type: 1
+    - field: curGw
+      regex: "\\s*(\\d*),[-]{0,1}\\s*\\d*.\\d{2},\\r\\n"
+      type: 1
+    - field: estDis
+      regex: "(\\d*.\\d{1})(\\d{6})\\s*\\d*,[-]{0,1}\\s*\\d*.\\d{2},\\r\\n"
+      type: 1

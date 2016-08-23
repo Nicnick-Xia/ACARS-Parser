@@ -1,0 +1,27 @@
+acarsFltTypes:
+  - 787_OOOI
+regexBeans:
+    - field: lastArinc
+      regex: "\\.(\\w{7})\\s+\\d{6}"
+      type: 1
+    - field: dspDt
+      regex: "\\.\\w{7}\\s+(\\d{6})"
+      type: 1
+    - field: telexDt
+      regex:"(\\d{6})([A-Z]{4}|----)([A-Z]{4}|----)"
+      type: 1
+    - field: tailNr
+      regex: "AN\\s+B-(\\d{4})"
+      type: 1
+    - field: fltNr
+      regex: "FI\\s+([A-Z]{2}\\d+[A-Z]?)"
+      type: 1
+    - field: depArpCd
+      regex: "([A-Z]{4}|----)([A-Z]{4}|----)(\\r\\n)*\\d{4}"
+      type: 1
+    - field: arvArpCd
+      regex: "([A-Z]{4}|----)([A-Z]{4}|----)(\\r\\n)*\\d{4}"
+      type: 2
+    - field: curFob
+      regex:"\\d{4}\\s*(\\d*)\\r\\n"
+      type: 1

@@ -1,0 +1,55 @@
+acarsFltTypes:
+ - 733_POS
+ - 734_POS
+ - 737_POS
+ - 738_POS
+ - 739_POS
+regexBeans:
+    - field: lastArinc
+      regex: "\\.(\\w{7})\\s+\\d{6}"
+      type: 1
+    - field: dspDt
+      regex: "\\.\\w{7}\\s+(\\d{6})"
+      type: 1
+    - field: telexDt
+      regex: "UTC (\\d{4})"
+      type: 1
+    - field: estTime
+      regex: "ETA\\s*(\\d{4})"
+      type: 1
+    - field: tailNr
+      regex: "AN\\s+B-(\\d{4})"
+      type: 1
+    - field: fltNr
+      regex: "FI\\s+([A-Z]{2}\\d+[A-Z]?)"
+      type: 1
+    - field: curLat
+      regex: "LAT\\s*((N|S){0,1}\\s*\\-{0,1}\\s*\\d*\\.\\d+)"
+      type: 1
+    - field: curLon
+      regex: "LON\\s*((E|W){0,1}\\s*\\-{0,1}\\s*\\d*\\.\\d+)"
+      type: 1
+    - field: curWd
+      regex: "WD\\s*([-]{0,1}\\d+|-----),WS\\s*(\\d+|----),"
+      type: 1
+    - field: curWs
+      regex: "WD\\s*([-]{0,1}\\d+|-----),WS\\s*(\\d+|----),"
+      type: 2
+    - field: curAlt
+      regex: "ALT\\s*(\\d+),"
+      type: 1
+    - field: curCas
+      regex: "CAS\\s*(\\d+)"
+      type: 1
+    - field: curMh
+      regex: "ETA\\s\\d*,\\w{4},\\w{4},(------|\\s*\\d*),"
+      type: 1
+    - field: depArpCd
+      regex: "([A-Z]{4}),[A-Z]{4}"
+      type: 1
+    - field: arvArpCd
+      regex: "[A-Z]{4},([A-Z]{4}),"
+      type: 1
+    - field: curFob
+      regex: "ETA\\s\\d*,\\w{4},\\w{4},(------|\\s*\\d*),(---|\\s*\\d*),(----|\\s*\\d*),\\s*\\d*,(\\s*\\d*)"
+      type: 4
