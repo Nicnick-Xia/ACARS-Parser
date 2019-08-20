@@ -38,7 +38,7 @@
 - 格式信息存放在res目录下的patternYaml目录中，以正则表达式的形式存放在一个个分机型和报文类型的yaml文件中，命名为 “ 飞机型号＋报文类型＋Pattern ” ，例如A32X系列的Pattern命名为A32XOOOIPattern.yaml。以下为其具体内容示例
 
 
-	```
+```
 acarsFltTypes:
   - 319_OOOI
   - 320_OOOI
@@ -76,7 +76,7 @@ regexBeans:
     - field: curFob
       regex: "(\\r\\n)*\\d{4}(\\s*\\d{1,4})(\\r\\n)*LON"
       type: 2
-	```
+```
 
 - 第一部分`acarsFltTypes`，其子项就是适用于此格式信息的机型的一个汇总，表示这些型号的飞机的Acars报文格式是完全相同的。
 - 第二部分`regexBeans`,用于存放一个**AcarsVo实体**的所有**字段**的格式信息。每一个子项配有3个属性：
